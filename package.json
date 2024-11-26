@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "dependencies": {
-    "inversify": "6.1.5-beta.0",
+    "inversify": "6.1.4",
     "reflect-metadata": "0.2.2"
   },
   "devDependencies": {
