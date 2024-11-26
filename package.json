@@ -1,0 +1,26 @@
+{
+  "name": "inversify-example-template",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "inversify": "6.1.5-beta.0",
+    "reflect-metadata": "0.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "22.9.3",
+    "prettier": "3.3.3",
+    "rimraf": "6.0.1",
+    "ts-loader": "9.5.1",
+    "typescript": "5.6.3",
+    "webpack": "5.96.1",
+    "webpack-cli": "5.1.4"
+  },
+  "scripts": {
+    "build": "pnpm run build:cjs && pnpm run build:esm",
+    "build:cjs": "tsc --build tsconfig.cjs.json && node ./scripts/writeCommonJsPackageJson.mjs ./lib/cjs",
+    "build:esm": "webpack && node ./scripts/writeEsmPackageJson.mjs ./lib/esm",
+    "build:clean": "rimraf lib",
+    "format": "prettier --write ./src/**/*.ts"
+  },
+  "license": "ISC"
+}
